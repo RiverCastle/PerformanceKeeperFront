@@ -63,7 +63,7 @@ jobs:
             echo "TARGET_UPSTREAM=blue" >> $GITHUB_ENV
           fi
           
-      - name: Docker compose
+      - name: Docker compose 실행
         uses: appleboy/ssh-action@master
         with:
           username: ubuntu
