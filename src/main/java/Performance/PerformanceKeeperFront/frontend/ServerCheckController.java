@@ -16,7 +16,7 @@ import java.util.TreeMap;
  * CICD 배포구조를 구축하면서 생성하였습니다.
  */
 @RestController
-@RequestMapping("/api/server")
+@RequestMapping("/views/server")
 public class ServerCheckController {
 
     @Value("${server.env}")
