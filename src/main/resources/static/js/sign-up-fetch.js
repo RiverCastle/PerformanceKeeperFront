@@ -1,4 +1,3 @@
-const back_end_server_url = 'http://ec2-13-124-219-184.ap-northeast-2.compute.amazonaws.com';
 const sign_up_button = document.getElementById("sign-in-button");
 sign_up_button.addEventListener('click', () => {
         const username = document.getElementById("username").value;

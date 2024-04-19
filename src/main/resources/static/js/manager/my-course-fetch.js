@@ -1,4 +1,4 @@
-fetch('/api/course/myCourse', {
+fetch(back_end_server_url + '/api/course/myCourse', {
     headers: {
         'Authorization': auth,
     },

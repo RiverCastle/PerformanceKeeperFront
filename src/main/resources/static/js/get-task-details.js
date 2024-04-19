@@ -2,7 +2,7 @@
 const apiUrl = '/api/course/' + course_id + '/task/' + assigned_task_id;
 
 // document가 로드된 후 실행되는 함수
-fetch(apiUrl, {
+fetch(back_end_server_url + apiUrl, {
     headers: {
         'Authorization': auth
     },

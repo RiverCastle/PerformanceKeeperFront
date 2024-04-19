@@ -2,7 +2,7 @@ const nickname_change_button = document.getElementById('nickname-change-button')
 nickname_change_button.addEventListener('click', () => {
     const nickname_input = prompt("새 닉네임을 입력해주세요.");
     if (nickname_input !== null) {
-        fetch('/api/course/' + course_id + '/member', {
+        fetch(back_end_server_url + '/api/course/' + course_id + '/member', {
             headers: {
                 'Authorization' : auth,
                 'Content-Type' : 'application/json'

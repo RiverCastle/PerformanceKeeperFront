@@ -4,7 +4,7 @@ sign_up_button.addEventListener('click', () => {
         const course_joincode = document.getElementById("course_joincode_input").value;
         const course_desc = document.getElementById("course_desc_input").value;
 
-        fetch('/api/course', {
+        fetch(back_end_server_url + '/api/course', {
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization' : auth

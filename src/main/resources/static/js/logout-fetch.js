@@ -1,6 +1,6 @@
 const btn_logout = document.getElementById('logout-button');
 btn_logout.addEventListener('click', () => {
-    fetch('/api/token', {
+    fetch(back_end_server_url + '/api/token', {
         headers: {
             'Authorization' : auth
         },

@@ -4,7 +4,7 @@ btn.addEventListener('click', () => {
     div_progress_wrapper.innerText = '';
     const date_input = document.getElementById("task-date-search-input").value;
 
-    fetch('/api/course/' + course_id + '/task/course-progress?date=' + date_input, {
+    fetch(back_end_server_url + '/api/course/' + course_id + '/task/course-progress?date=' + date_input, {
         headers: {
             'Authorization': auth
         },
@@ -28,7 +28,7 @@ btn.addEventListener('click', () => {
                 const task_id = task.id;
                 taskNameHeader.textContent = task.name;
                 taskNameHeader.addEventListener('mouseover', () => {
-                    fetch('/api/course/' + course_id + '/task/' + task_id + '/progress', {
+                    fetch(back_end_server_url + '/api/course/' + course_id + '/task/' + task_id + '/progress', {
                         headers: {
                             "Authorization": auth
                         },

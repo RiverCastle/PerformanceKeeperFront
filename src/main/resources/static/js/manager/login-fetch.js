@@ -3,7 +3,7 @@ document.getElementById("login-fetch-button").addEventListener("click", () => {
     const password = document.getElementById("password").value;
 
     // 로그인 API 엔드포인트로 POST 요청 보내기
-    fetch('/api/token', {
+    fetch(back_end_server_url + '/api/token', {
         headers: {
             "Content-Type": "application/json"
         },

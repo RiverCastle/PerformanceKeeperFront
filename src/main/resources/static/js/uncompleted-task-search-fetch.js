@@ -3,7 +3,7 @@ const uncompleted_tasks_search_btn = document.getElementById('uncompleted-tasks-
 uncompleted_tasks_search_btn.addEventListener('click', () => {
     uncompleted_tasks_wrapper.innerText = '';
     completed_tasks_wrapper.innerText = '';
-    fetch('/api/course/' + course_id + '/task/uncompleted-assigned-tasks', {
+    fetch(back_end_server_url + '/api/course/' + course_id + '/task/uncompleted-assigned-tasks', {
         headers: {
             'Authorization' : auth
         },

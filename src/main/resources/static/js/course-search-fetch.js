@@ -3,7 +3,7 @@ search_button.addEventListener("click", () => {
     const keyword_input = document.getElementById("keyword_input").value;
     let coursesTag = document.getElementById("course-table-body");
     coursesTag.innerHTML = '';
-    fetch('/api/course?keyword=' + keyword_input, {
+    fetch(back_end_server_url + '/api/course?keyword=' + keyword_input, {
         headers: {
             'Content-Type': 'application/json'
         },
@@ -40,7 +40,7 @@ search_button.addEventListener("click", () => {
                 courseJoinButton.setAttribute('class', "btn btn-success");
                 courseJoinButton.addEventListener('click', () => {
                     const joinCode = prompt('해당 팀의 참여코드를 입력하세요 :');
-                    fetch('/api/course/' + courseId + '/member', {
+                    fetch(back_end_server_url + '/api/course/' + courseId + '/member', {
                         headers: {
                             "Authorization": auth,
                             'Content-Type': 'application/json'
