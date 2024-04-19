@@ -5,7 +5,7 @@ task_search_by_keyword_btn.addEventListener('click', () => {
     completed_tasks_wrapper.innerText = '';
     const keyword_input = document.getElementById("task-keyword-search-input").value;
 
-    fetch('/api/course/' + course_id + '/task/my-progress?keyword=' + keyword_input, {
+    fetch(back_end_server_url + '/api/course/' + course_id + '/task/my-progress?keyword=' + keyword_input, {
         headers: {
             'Authorization': auth
         },

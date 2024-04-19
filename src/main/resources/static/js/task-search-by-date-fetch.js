@@ -8,7 +8,7 @@ task_search_btn.addEventListener('click', () => {
     completed_tasks_wrapper.innerText = '';
     const date_input = document.getElementById("task-date-search-input").value;
 
-    fetch('/api/course/' + course_id + '/task/my-progress?date=' + date_input, {
+    fetch(back_end_server_url + '/api/course/' + course_id + '/task/my-progress?date=' + date_input, {
         headers: {
             'Authorization': auth
         },

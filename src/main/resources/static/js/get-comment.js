@@ -1,4 +1,4 @@
-fetch('/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment', {
+fetch(back_end_server_url + '/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment', {
     headers: {
         'Authorization': auth
     },
@@ -39,7 +39,7 @@ fetch('/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comme
                     comment_delete_button.className = "comment_delete_button"
                     comment_delete_button.addEventListener('click', () => {
                         alert("정말로 댓글을 삭제하시겠습니까?");
-                        fetch('/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment/' + comment_id, {
+                        fetch(back_end_server_url + '/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment/' + comment_id, {
                             headers: {
                                 "Authorization": auth
                             },
@@ -79,7 +79,7 @@ fetch('/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comme
                             reply_delete_button.className = "reply_delete_button"
                             reply_delete_button.addEventListener('click', () => {
                                 alert("정말로 답글을 삭제하시겠습니까?");
-                                fetch('/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment/' + comment_id + '/reply/' + replyId, {
+                                fetch(back_end_server_url + '/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment/' + comment_id + '/reply/' + replyId, {
                                     headers: {
                                         "Authorization": auth
                                     },
@@ -111,7 +111,7 @@ fetch('/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comme
                     if (new_reply_content !== null) {
                         const commentId = comment.id;
                         // 답글 추가 api
-                        fetch('/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment/' + commentId + '/reply', {
+                        fetch(back_end_server_url + '/api/course/' + course_id + '/assignedTask/' + assigned_task_id + '/comment/' + commentId + '/reply', {
                             headers: {
                                 "Authorization": auth,
                                 "Content-Type": "application/json"

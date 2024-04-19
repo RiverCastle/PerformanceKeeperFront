@@ -4,7 +4,7 @@ function create_task() {
     const description = document.getElementById("task_desc_input").value;
     const start = document.getElementById("task_start_at").value;
 
-    fetch('/api/course/' + courseId + '/task', {
+    fetch(back_end_server_url + '/api/course/' + courseId + '/task', {
         headers: {
             "Authorization": auth,
             'Content-Type': 'application/json'

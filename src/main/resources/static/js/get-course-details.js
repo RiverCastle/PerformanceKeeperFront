@@ -2,7 +2,7 @@ const course_name_tag = document.getElementById('course-name-tag');
 const course_desc_tag = document.getElementById('course-desc-tag');
 
 
-fetch('/api/course/' + course_id, {
+fetch(back_end_server_url + '/api/course/' + course_id, {
     headers: {
         'Authorization': auth
     },

@@ -1,6 +1,6 @@
 let member_id;
 let member_nickname;
-fetch('/api/course/' + course_id + '/member', {
+fetch(back_end_server_url + '/api/course/' + course_id + '/member', {
     headers: {
         'Authorization' : auth
     },

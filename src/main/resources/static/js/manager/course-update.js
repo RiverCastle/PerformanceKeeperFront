@@ -4,7 +4,7 @@ const btn_update_course_desc = document.getElementById('btn-update-course-desc')
 btn_update_course_name.addEventListener('click', () => {
     const new_name_input = prompt("새로운 강의실 이름을 입력해주세요 : ", course_name_tag.textContent)
     if (new_name_input !== null) {
-        fetch('/api/course/' + course_id + '/name', {
+        fetch(back_end_server_url + '/api/course/' + course_id + '/name', {
             headers: {
                 'Authorization': auth,
                 'Content-Type': 'application/json'
@@ -28,7 +28,7 @@ btn_update_course_name.addEventListener('click', () => {
 btn_update_course_desc.addEventListener('click', () => {
     const new_desc_input = prompt("새로운 강의실 소개를 입력해주세요 : ", course_desc_tag.textContent)
     if (new_desc_input !== null) {
-        fetch('/api/course/' + course_id + '/description', {
+        fetch(back_end_server_url + '/api/course/' + course_id + '/description', {
             headers: {
                 'Authorization': auth,
                 'Content-Type': 'application/json'
